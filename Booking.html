@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Events.css" />
+    <script src="
+https://cdn.jsdelivr.net/npm/hamburger-menu@0.7.0/dist/hamburger-menu.min.js
+"></script>
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/hamburger-menu@0.7.0/dist/hamburger-menu.min.css
+"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Book Your Tickets</h2>
+      <nav class="hamburger-menu">
+        <a class="hamburger" href="#">&#9776;</a>
+        <aside>
+          <menu>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Events.html">Concerts</a></li>
+            <li><a href="about.html">About Hall</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="Booking.html">Booking</a></li>
+            <form>
+              <input
+                type="search"
+                id="searchBar"
+                placeholder="Search concerts..."
+              />
+              <button id="searchBtn" type="submit">Search</button>
+            </form>
+          </menu>
+        </aside>
+      </nav>
+    </header>
+
+    <div id="bookingInfo">
+      <h2>Booking Information</h2>
+      <p>
+        To book your tickets for upcoming concerts at Viking Hall, please
+        select the desired event from our <a href="Events.html">Events</a> page
+        and click on the "Book Tickets" button. You will be redirected to a
+        secure booking platform where you can choose your seats and complete
+        your purchase.
+      </p>
+      <p>
+        For group bookings or special requests, please contact our booking team
+        via the <a href="contact.html">Contact Us</a> page. We look forward to
+        hosting you at Viking Hall!
+      </p>
+    </div>
+
+
+     <div class="container" id="bookticket">
+        <h1>Concert Ticket Booking</h1>
+        <form action="submit_ticket_booking.php" method="POST">
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="concertSelection">Concert</label>
+              <select id="concertSelection" name="concertSelection" required>
+                <option value="0"></option>
+                <option value="1">lofi</option>
+                <option value="2">jazz</option>
+                <option value="3">pop</option>
+                <option value="4">classical</option>
+                <option value="5">rock Fest</option>
+                <option value="6">country</option>
+
+              </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ticketQuantity">Number of Tickets:</label>
+                <select id="ticketQuantity" name="ticketQuantity" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cardNumber">Credit Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date (MM/YY):</label>
+                <input type="text" id="expiryDate" name="expiryDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+
+            <button type="submit">Book Tickets</button>
+        </form>
+    </div>
+
+   
+      
+    </div>
+
+
+
+    
+  </body>
+</html>
